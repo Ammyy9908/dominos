@@ -1,0 +1,27 @@
+const locations = [
+  { id: 1, location: "Chennai" },
+  { id: 2, location: "Hyderabad" },
+  { id: 3, location: "Bangalore" },
+  { id: 4, location: "Kolkata" },
+  { id: 5, location: "Mumbai" },
+  { id: 6, location: "New Delhi" },
+  { id: 7, location: "Ahmedabad" },
+  { id: 8, location: "Pune" },
+  { id: 9, location: "Goa" },
+  { id: 10, location: "Jaipur" },
+  { id: 11, location: "Chandigarh" },
+  { id: 12, location: "Lucknow" },
+  { id: 13, location: "Mysore" },
+  { id: 14, location: "Patna" },
+  { id: 15, location: "Guwahati" },
+  { id: 16, location: "Ballari" },
+  { id: 17, location: "Secundrabad" },
+  { id: 18, location: "Vishakapatnam" },
+  { id: 19, location: "Manipal" },
+  { id: 20, location: "Dwarka" },
+  { id: 21, location: "Agra" },
+  { id: 22, location: "Silchar" },
+  { id: 23, location: "Nanital" },
+  { id: 24, location: "Nasik" }
+];
+export default locations;

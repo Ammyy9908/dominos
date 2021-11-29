@@ -1,0 +1,31 @@
+.cart-fab{
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgb(0, 97, 189);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon{
+    position: relative;
+}
+.cart-count{
+    position: absolute;
+    font-weight: 900;
+    right: -5px;
+    top: -5px;
+    /* background-color: #fff; */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* color: rgb(0, 97, 189); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,19 @@
+.section-header{
+    font-size: 28px;
+   
+}
+
+.menu-banner{
+    width: 100%;
+}
+.menu-banner img{
+    width: 100%;
+}
+
+.menu-cards{
+    display: flex;
+    gap:25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}

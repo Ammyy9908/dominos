@@ -1,0 +1,72 @@
+.menu-card{
+    width: 330px;
+    height: 350px;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.menu-card-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: inherit;
+    overflow: hidden;
+}
+.menu-card-background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.card-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    border-radius: inherit;
+    background: linear-gradient(35.13deg, rgba(4, 134, 255, 0.8) -5.43%, rgba(65, 63, 63, 0) 94.81%);
+}
+
+.card-content{
+    position: absolute;
+    z-index: 3;
+    bottom: 25px;
+    color: #fff;
+    padding-left: 15px;
+    width: 75%;
+    opacity: 0;
+}
+.card-content h3{
+font-size: 18px;
+}
+
+.menu-card a{
+    margin-top: 15px;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fff;
+    color: #FE720D;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    height: 39px;
+    border-radius: 5px;
+}
+
+.menu-card:hover .menu-card-background img{
+    transform: scale(1.05);
+}
+
+.menu-card:hover .card-overlay{
+    
+    opacity: 1;
+}
+.menu-card:hover .card-content{
+    opacity: 1;
+}

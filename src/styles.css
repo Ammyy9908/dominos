@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+@media screen and (max-width: 1055px) {
+  .promotion-wrapper {
+    display: block;
+  }
+  .promotion-wrapper img {
+    display: none;
+  }
+}
+@media screen and (max-width: 1030px) {
+  nav,
+  .app-promote-btn {
+    display: none;
+  }
+
+  .banner-content {
+    align-items: center;
+  }
+}
