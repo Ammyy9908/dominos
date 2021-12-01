@@ -44,11 +44,30 @@ nav ul {
 .auth-btn {
   text-decoration: none;
   display: flex;
-  width: 148px;
+  width: 139px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #f3223b;
   height: 45px;
   align-items: center;
   justify-content: center;
   color: #fff;
   border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  
+  align-items: center;
+}
+
+.auth-btn-authenicated{
+  background-color: white !important;
+  display: flex;
+  gap:5px;
+  justify-content: flex-end;
+}
+
+.auth-btn img{
+  width:35px;
+  height:35px;
+  border-radius: 50%;
 }

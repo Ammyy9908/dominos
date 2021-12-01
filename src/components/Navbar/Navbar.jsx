@@ -1,18 +1,23 @@
+import Cookies from "js-cookie";
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { SetAuthPop, SetUser } from "../../redux/actions/_appAction";
 import "./Navbar.css";
 const Navbar = ({user,SetUser,cart,SetAuthPop}) => {
-  console.log(user,cart);
+ 
 
-  const logout = ()=>{
-    SetUser(null);
-  }
+ 
 
   const handleAuthPop = ()=>{
     SetAuthPop(true);
 
+  }
+
+  const handleLogout = ()=>{
+    Cookies.remove('AUTH_TOKEN');
+    SetUser(null);
+    
   }
   return (
     <div className="navbar-wrapper">
@@ -34,8 +39,8 @@ const Navbar = ({user,SetUser,cart,SetAuthPop}) => {
             </li>
           </ul>
         </nav>
-        <button className="auth-btn" onClick={handleAuthPop}>
-          {user?user.mobile:"Login"}
+        <button className={`auth-btn ${user && "auth-btn-authenicated"}`} onClick={user?handleLogout:handleAuthPop}>
+          {user?<><img src={user.avatar}/></>:"Login"}
         </button>
       </div>
     </div>
