@@ -1,0 +1,9 @@
+// intially we have no user
+// logined to application
+// when we click on sign in button
+// it makes a http request to
+// server and server sends
+an auth token an using that token
+
+we request his/her data and set the application user
+

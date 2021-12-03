@@ -8,7 +8,6 @@ import Offer from "../components/Offers/Offer";
 import metaInfo from "../data/meta";
 import locations from "../data/cities";
 import "./index.css";
-import Cart from "../components/Cart/Cart";
 import Auth from "../components/Auth/Auth";
 const Home = () => {
   return (
@@ -108,13 +107,13 @@ const Home = () => {
               For lightning fast ordering experience download the dominos App
             </p>
             <div className="promotion-links">
-              <a href="#">
+              <a href="#playstore">
                 <img
                   src="https://www.dominos.co.in/assets/play_store.png"
                   alt="play-store-icon"
                 />
               </a>
-              <a href="#">
+              <a href="#appstore">
                 <img
                   src="https://www.dominos.co.in/assets/app_store.png"
                   alt="app store icon"
@@ -139,7 +138,6 @@ const Home = () => {
         })}
       </div>
       <Auth/>
-      <Cart/>
       <Footer />
     </div>
   );

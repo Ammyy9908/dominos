@@ -64,10 +64,45 @@ nav ul {
   display: flex;
   gap:5px;
   justify-content: flex-end;
+  position: relative;
 }
 
 .auth-btn img{
   width:35px;
   height:35px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-dropdown{
+  position: absolute;
+  width: 175px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  top: 45px;
+  left: -45px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  transform: scale(.1);
+  transform-origin: top right;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+.drop_enable{
+  transform: scale(1);
+  opacity: 1;
+}
+
+.user-dropdown a{
+  text-decoration: none;
+  color: #004794;
+  font-weight: 500;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
 }

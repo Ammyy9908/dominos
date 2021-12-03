@@ -8,51 +8,51 @@ const Footer = () => {
         <div className="footer-item">
           <div className="footer-item-header">Company</div>
           <div className="footer-item-links">
-            <a href="#">Blog</a>
-            <a href="#">Investor</a>
-            <a href="#">Feedback</a>
-            <a href="#">Ads</a>
+            <a href="#blog">Blog</a>
+            <a href="#invest">Investor</a>
+            <a href="#feedback">Feedback</a>
+            <a href="#ads">Ads</a>
           </div>
         </div>
         <div className="footer-item">
           <div className="footer-item-header">About</div>
           <div className="footer-item-links">
-            <a href="#">Gift Card</a>
-            <a href="#">Card Balance Enquiry</a>
-            <a href="#">FAQ</a>
+            <a href="#gift">Gift Card</a>
+            <a href="#enquiry">Card Balance Enquiry</a>
+            <a href="#faq">FAQ</a>
           </div>
         </div>
         <div className="footer-item">
           <div className="footer-item-header">Legal</div>
           <div className="footer-item-links">
-            <a href="#">Disclaimer</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
+            <a href="#disclaimer">Disclaimer</a>
+            <a href="#terms">Terms & Conditions</a>
+            <a href="#privacy">Privacy Policy</a>
           </div>
         </div>
 
         <div className="footer-item">
           <div className="footer-item-header">Social Media</div>
           <div className="footer-item-links social-links">
-            <a href="#">
+            <a href="#fb">
               <img
                 src="https://www.dominos.co.in/assets/fb.png"
                 alt="facebook-icon"
               />
             </a>
-            <a href="#">
+            <a href="#twitter">
               <img
                 src="https://www.dominos.co.in/assets/twitter.png"
                 alt="twitter-icon"
               />
             </a>
-            <a href="#">
+            <a href="#insta">
               <img
                 src="https://www.dominos.co.in/assets/instagram.png"
                 alt="insta-icon"
               />
             </a>
-            <a href="#">
+            <a href="#yt">
               <img
                 src="https://www.dominos.co.in/assets/You_tube.png"
                 alt="yt-icon"

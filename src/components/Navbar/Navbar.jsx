@@ -1,24 +1,13 @@
-import Cookies from "js-cookie";
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { SetAuthPop, SetUser } from "../../redux/actions/_appAction";
 import "./Navbar.css";
-const Navbar = ({user,SetUser,cart,SetAuthPop}) => {
+const Navbar = ({user,SetAuthPop}) => {
+
+  const [isDrop,setDrop] = React.useState(false);
+  
  
-
- 
-
-  const handleAuthPop = ()=>{
-    SetAuthPop(true);
-
-  }
-
-  const handleLogout = ()=>{
-    Cookies.remove('AUTH_TOKEN');
-    SetUser(null);
-    
-  }
   return (
     <div className="navbar-wrapper">
       <div className="navbar">
@@ -39,8 +28,20 @@ const Navbar = ({user,SetUser,cart,SetAuthPop}) => {
             </li>
           </ul>
         </nav>
-        <button className={`auth-btn ${user && "auth-btn-authenicated"}`} onClick={user?handleLogout:handleAuthPop}>
-          {user?<><img src={user.avatar}/></>:"Login"}
+        {/**onClick={user?handleLogout:handleAuthPop} */}
+        <button className={`auth-btn ${user && "auth-btn-authenicated"}`} tabIndex="1" onFocus={()=>{
+          user && setDrop(true);
+          !user && SetAuthPop(true);
+        }} onBlur={()=>{
+          user &&setDrop(false);
+          !user && SetAuthPop(false);
+        }}>
+          {user?<><img src={user.avatar} alt="user-avatar"/></>:"Login"}
+          {user && <div className={`user-dropdown ${isDrop && "drop_enable"}`}>
+            <Link to="/orders">My Orders</Link>
+            <Link to="/profile">Profile</Link>
+            <Link to="/favorites">My favourites</Link>
+          </div>}
         </button>
       </div>
     </div>

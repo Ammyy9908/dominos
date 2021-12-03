@@ -48,7 +48,7 @@ getCoords();
   
   return (
     <div className="online-order-hero">
-      <img src="https://www.dominos.co.in/assets/header_bg.png" alt="banner-image" className="banner-image"/>
+      <img src="https://www.dominos.co.in/assets/header_bg.png" alt="banner-thumb" className="banner-image"/>
       <div className="banner-wrapper">
         <div className="banner-content">
           <h2>Domino's online ordering</h2>

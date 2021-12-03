@@ -1,7 +1,8 @@
 const intialState = {
-  user: null,
+  user: false,
   cart: [],
-  auth_popup:false
+  auth_popup:false,
+  orders:[]
 };
 
 const AppReducer = (state = intialState, action) => {
@@ -12,6 +13,56 @@ const AppReducer = (state = intialState, action) => {
         user: action.user
       };
 
+      case "REMOVE_ITEM":{
+        const index = state.cart.findIndex(
+          (basketItem) => basketItem.item.id === action.id
+        );
+
+        console.log(index);
+
+        let newBasket = [...state.cart];
+
+        if(index>=0){
+          newBasket.splice(index, 1);
+        }
+
+        return {
+          ...state,
+          cart: newBasket
+        }
+      }
+
+      case "INCREMENT":{
+        const index = state.cart.findIndex(
+          (basketItem) => basketItem.item.id === action.id
+        );
+
+        state.cart[index].qty += 1;
+        return {
+          ...state,
+          cart: [...state.cart]
+        }
+      }
+
+
+      case "DECREMENT":{
+        const index = state.cart.findIndex(
+          (basketItem) => basketItem.item.id === action.id
+        );
+
+        state.cart[index].qty -= 1;
+        return {
+          ...state,
+          cart: [...state.cart]
+        }
+      }
+
+      case "SET_ORDERS":
+      return {
+        ...state,
+        orders: action.orders
+      };
+
       case "SET_AUTH_POP":
       return {
         ...state,
@@ -20,10 +71,25 @@ const AppReducer = (state = intialState, action) => {
       
 
       case "SET_CART":
-        return {
-          ...state,
-          cart: [...state.cart,action.item]
-        };
+        const index = state.cart.findIndex(
+          (basketItem) => basketItem.item.id === action.item.item.id
+        );
+        console.log(action.item.item.id);
+        console.log(index);
+        if(index>=0){
+          state.cart[index].qty += 1;
+          return {
+            ...state,
+            cart: [...state.cart]
+          }
+        }
+        else{
+          return {
+            ...state,
+            cart: [...state.cart,action.item]
+          };
+        }
+        
 
     default:
       return state;

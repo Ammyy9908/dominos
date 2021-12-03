@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Home from "./pages";
-import { SetUser } from "./redux/actions/_appAction";
+import { SetOrders, SetUser } from "./redux/actions/_appAction";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import "./styles.css";
 import Menu from "./pages/menu";
@@ -8,8 +8,12 @@ import Items from "./pages/items";
 import React from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import getUserOrders from "./utils/orders";
+import Orders from "./pages/orders";
+import Profile from "./pages/profile";
+import Logout from "./pages/logout";
 
-function App({ user, setUser }) {
+function App({ user, setUser,SetOrders }) {
 
   React.useEffect(()=>{
     const getUser = async ()=>{
@@ -33,6 +37,13 @@ function App({ user, setUser }) {
           setUser(user);
         }
       })
+
+      getUserOrders().then((data)=>{
+        if(data){
+          console.log('Incoming User orders!',data.orders);
+          SetOrders(data.orders)
+        }
+      })
     }
   },[])
 
@@ -53,6 +64,18 @@ function App({ user, setUser }) {
     <Route exact path="/item">
     <Items/>
     </Route>
+
+    <Route exact path="/orders">
+    <Orders/>
+    </Route>
+
+    <Route exact path="/profile">
+    <Profile/>
+    </Route>
+
+    <Route exact path="/logout">
+    <Logout/>
+    </Route>
     
 
        
@@ -72,7 +95,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setUser: (user) => dispatch(SetUser(user))
+  setUser: (user) => dispatch(SetUser(user)),
+  SetOrders:(orders) => dispatch(SetOrders(orders))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

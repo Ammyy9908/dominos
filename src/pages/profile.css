@@ -1,0 +1,125 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+    gap:5px;
+}
+.user-avatar{
+    width:175px;
+    height: 175px;
+    position: relative;
+}
+.profile-edit-btn{
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    bottom: 0;
+    right:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 65px;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #0b58d3;
+    cursor: pointer;
+}
+.user-avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logout_btn{
+    display: flex;
+    width: 130px;
+    align-items: center;
+    height: 39px;
+    background-color: #0b58d3;
+    color: #fff;
+    justify-content: center;
+}
+.profile a{
+    text-decoration: none;
+}
+
+.profile-form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.profile-form-wrapper{
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    gap:25px;
+    animation:scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.profile-form-avatar{
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+
+.profile-form-avatar input{
+    display: none;
+}
+.profile-form-avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.form-input{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.form-input input[type="text"]{
+    width: 98%;
+    padding-left: 5px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-input input[type="button"]{
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #174286;
+    color: #fff;
+}

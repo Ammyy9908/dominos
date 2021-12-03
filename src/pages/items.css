@@ -3,4 +3,13 @@
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     grid-gap:14px;
+    
+}
+
+.items-body{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:18px;
+    position: relative;
+    margin-bottom: 15px;
 }

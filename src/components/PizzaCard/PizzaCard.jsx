@@ -1,31 +1,17 @@
 import React from 'react'
 import "./PizzaCard.css"
 import {MdFavorite} from "react-icons/md"
-import {BiDownArrow} from "react-icons/bi"
-
-function SelectInput({label,crust}){
-
+import { connect } from 'react-redux';
+import { Decrement, Increment, RemoveItem } from '../../redux/actions/_appAction';
+function PizzaCard({cover,name,desc,price,size,SetCart,item}) {
    
-    return (
-        <div className="custom-select">
-                <span className="input-label">{label}</span>
-                <div className="custom-select-input">
-                <div className="custom-input-selector">
-                    <span>Option</span>
-                    <button>
-                        <BiDownArrow/>
-                    </button>
-                </div>
-                </div>
-        </div>
-    )
-}
-function PizzaCard({cover,name,desc,price,crust,SetCart,item}) {
-    console.log(crust)
+ 
 
     const handleItemAdd = ()=>{
         SetCart({item,qty:1});
     }
+
+    
 
     return (
         <div className="pizza-card">
@@ -38,16 +24,26 @@ function PizzaCard({cover,name,desc,price,crust,SetCart,item}) {
                 <h3>{name}</h3>
                 <p>{desc}</p>
                 <hr />
-                <div className="piza-card-controls">
-                    <SelectInput label="size"/>
-                    <SelectInput label="Crust"/>
-                </div>
+                {/* <div className="piza-card-size">
+                    <button>{size}</button>
+                </div> */}
             </div>
             <div className="pizza-card-footer">
-                <a href="#" onClick={handleItemAdd}>Add to cart</a>
+               <button onClick={handleItemAdd}>Add to cart</button>
+               
             </div>
         </div>
     )
 }
 
-export default PizzaCard
+const mapStateToProps = (state) => ({
+    cart:state.appReducer.cart
+})
+
+const mapDispatchToProps = (dispatch)=>({
+    removeItem:(id)=>dispatch(RemoveItem(id)),
+    Increment:(id)=>dispatch(Increment(id)),
+    Decrement:(id)=>dispatch(Decrement(id))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(PizzaCard)

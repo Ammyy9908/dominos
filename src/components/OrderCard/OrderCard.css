@@ -1,0 +1,92 @@
+.order-card{
+  
+    box-shadow: 0px 0px 5px 0px #888888;
+    height: 205px;
+    border-radius: 3px;
+}
+
+.order-card-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.order-card-thumb{
+    width: 100px;
+    height: 100%;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.order-card-thumb img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.order-card-header{
+    width: 100%;
+    display: flex;
+    gap:5px;
+    justify-content: space-between;
+    position: relative;
+}
+.status-chip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 65px;
+    color: #fff;
+    font-size: 12px;
+    height: 15px;
+   width: 15px;
+}
+
+.processing-chip{
+    background-color: #ffc107;
+}
+.delivered-chip{
+    background-color: #4deb72;
+}
+.cancelled-chip{
+    background-color: #dc3545;
+}
+.order-card-header h3{
+    font-size: 14px;
+    background-color: #fafafa;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.favourite-btn{
+    font-size: 12px;
+    border: 1px solid transparent;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.order-card-footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.order-footer-right{
+    width: 100%;
+}
+
+
+.order-card-meta{
+    padding-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
