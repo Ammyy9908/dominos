@@ -4,7 +4,7 @@ import Cookies from "js-cookie"
 const getUserOrders = async ()=>{
 
     try{
-        const r = await axios.get('http://localhost:5000/api/order/user/orders',{
+        const r = await axios.get('https://dominos-backend8.herokuapp.com/api/order/user/orders',{
             headers:{
                 'Authorization':Cookies.get('AUTH_TOKEN')
             }

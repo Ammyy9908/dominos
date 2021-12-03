@@ -8,7 +8,7 @@ const saveProfile = async (profile) => {
         console.log(profile);
         const {name,email,avatar} = profile;
         console.log(name,email,avatar);
-        const r = await axios.put(`http://localhost:5000/api/auth/user/update`,{
+        const r = await axios.put(`https://dominos-backend8.herokuapp.com/api/auth/user/update`,{
             name,
             email,
             avatar,
