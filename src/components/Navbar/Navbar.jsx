@@ -40,7 +40,7 @@ const Navbar = ({user,SetAuthPop}) => {
           {user && <div className={`user-dropdown ${isDrop && "drop_enable"}`}>
             <Link to="/orders">My Orders</Link>
             <Link to="/profile">Profile</Link>
-            <Link to="/favorites">My favourites</Link>
+            <Link to="/favourites">My favourites</Link>
           </div>}
         </button>
       </div>

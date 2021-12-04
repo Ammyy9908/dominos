@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { SetCart } from '../../redux/actions/_appAction'
 import "./MenuCard.css"
-function MenuCard({image,type,desc,SetCart}) {
+function MenuCard({image,type,desc,category}) {
 
     
     return (
@@ -15,7 +15,7 @@ function MenuCard({image,type,desc,SetCart}) {
             <div className="card-content">
                 <h3>{type}</h3>
                 <p>{desc}</p>
-                <Link to="/item">View all</Link>
+                <Link to={`/item/${category}`}>View all</Link>
             </div>
         </div>
     )

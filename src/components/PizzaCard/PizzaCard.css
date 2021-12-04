@@ -4,6 +4,10 @@
     border-radius: 3px;
     padding-bottom: 10px;
     cursor: pointer;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .pizza-card-header{
     height: 115px;
@@ -45,6 +49,10 @@ color: #fff;
     background-color: transparent;
     border: 0;
     cursor: pointer;
+}
+
+.liked{
+    color: red !important;
 }
 
 .pizza-card-body{

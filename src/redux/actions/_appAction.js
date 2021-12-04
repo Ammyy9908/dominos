@@ -32,3 +32,13 @@ export const SetOrders = (orders)=>({
   type:"SET_ORDERS",
   orders:orders
 })
+
+export const AddFavourite = (favourite)=>({
+  type:"ADD_FAVOURITE",
+  favourite:favourite
+})
+
+export const RemoveFavourite = (id)=>({
+  type:"REMOVE_FAVOURITE",
+  id:id
+})

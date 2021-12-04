@@ -2,7 +2,8 @@ const intialState = {
   user: false,
   cart: [],
   auth_popup:false,
-  orders:[]
+  orders:[],
+  favourites:[]
 };
 
 const AppReducer = (state = intialState, action) => {
@@ -12,6 +13,32 @@ const AppReducer = (state = intialState, action) => {
         ...state,
         user: action.user
       };
+
+      case "ADD_FAVOURITE":
+        return{
+          ...state,
+          favourites: [...state.favourites,action.favourite]
+        }
+
+
+        case "REMOVE_FAVOURITE":{
+          const index = state.favourites.findIndex(
+            (favouriteItem) => favouriteItem.item.id === action.id
+          );
+  
+          console.log(index);
+  
+          let newFavourite = [...state.favourites];
+  
+          if(index>=0){
+            newFavourite.splice(index, 1);
+          }
+  
+          return {
+            ...state,
+            favourites: newFavourite
+          }
+        }
 
       case "REMOVE_ITEM":{
         const index = state.cart.findIndex(

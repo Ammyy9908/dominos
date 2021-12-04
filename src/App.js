@@ -12,6 +12,7 @@ import getUserOrders from "./utils/orders";
 import Orders from "./pages/orders";
 import Profile from "./pages/profile";
 import Logout from "./pages/logout";
+import Favourites from "./pages/favourites";
 
 function App({ user, setUser,SetOrders }) {
 
@@ -61,9 +62,21 @@ function App({ user, setUser,SetOrders }) {
     <Menu/>
     </Route>
 
-    <Route exact path="/item">
-    <Items/>
+    <Route exact path="/favourites">
+    <Favourites/>
     </Route>
+
+   
+
+    <Route
+           exact
+            path="/item/:type"
+            render={(props) => {
+              const type = props.match.params.type;
+              return <Items type={type && type} />;
+            }}
+           
+          />
 
     <Route exact path="/orders">
     <Orders/>

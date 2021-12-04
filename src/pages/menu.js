@@ -18,10 +18,10 @@ function Menu() {
                <div className="section-wrapper">
                    <div className="section-header">Menu</div>
                    <div className="menu-cards">
-                    <MenuCard image={veg} type="Veg Pizzas" desc="A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier"/>
-                    <MenuCard image={nveg} type="Non veg Pizzas" desc="Choose your favourite non-veg pizzas from the Domino's Pizza menu. Get fresh non-veg pizza with your choice of crusts & toppings"/>
-                    <MenuCard image={mania} type="Pizza Mania" desc="Indulge into mouth-watering taste of Pizza mania range, perfect answer to all your food cravings"/>
-                    <MenuCard image={beverage} type="SIDES & BEVERAGES" desc="Complement your pizza with wide range of sides & beverages available at Domino's Pizza India"/>
+                    <MenuCard image={veg} type="Veg Pizzas" desc="A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier" category="veg"/>
+                    <MenuCard image={nveg} type="Non veg Pizzas" desc="Choose your favourite non-veg pizzas from the Domino's Pizza menu. Get fresh non-veg pizza with your choice of crusts & toppings" category="non-veg"/>
+                    <MenuCard image={mania} type="Pizza Mania" desc="Indulge into mouth-watering taste of Pizza mania range, perfect answer to all your food cravings" category="pizza-mania"/>
+                    <MenuCard image={beverage} type="SIDES & BEVERAGES" desc="Complement your pizza with wide range of sides & beverages available at Domino's Pizza India" category="beverage"/>
                    </div>
                </div>
            </div>

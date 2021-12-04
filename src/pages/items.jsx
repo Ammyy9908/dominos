@@ -7,19 +7,20 @@ import Footer from '../components/Footer/Footer'
 import { connect } from 'react-redux'
 import { SetCart } from '../redux/actions/_appAction'
 import CartSection from '../components/CartSection/CartSection'
-function Items({SetCart}) {
+function Items({SetCart,type}) {
+
+    const filtered = products.filter(item=>item.category===type)
     return (
         <div>
             <Navbar/>
             <section className="main-section">
                 <div className="section-wrapper">
-                    <h1>Pizzas</h1>
                     <div className="items-body">
                     <CartSection/>
                     <div className="items">
                       
                       {
-                          products.map((product)=>{
+                          filtered.map((product)=>{
                               return <PizzaCard cover={product.cover} name={product.name} desc={product.dsecription} price={product.price} item={product} SetCart={SetCart} size={product.size}/>
                           })
                       }
